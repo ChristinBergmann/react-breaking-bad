@@ -119,18 +119,23 @@ input[type="text"] {
 
 .card li {
   list-style: circle;
-  /* (changetonone) */
   padding-bottom: 10px;
+}
+
+.card ul {
+  margin-top: 25px;
+  margin-left: 15px;
 }
 
 @media (max-width: 800px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media (max-width: 500px) {
   .cards {
     grid-template-columns: 1fr;
+    margin: 10px 20px;
   }
 }

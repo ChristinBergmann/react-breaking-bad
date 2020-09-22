@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchItems = async () => {
-      const result = await axios(
+      const result = await axios.get(
         `https://breakingbadapi.com/api/characters?name=${query}`
       );
 
@@ -20,9 +20,9 @@ const App = () => {
       setItems(result.data);
       setIsLoading(false);
     };
-
     fetchItems();
   }, [query]);
+
   return (
     <div className="container">
       <Header />
